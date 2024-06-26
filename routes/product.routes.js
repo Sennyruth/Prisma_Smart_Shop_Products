@@ -32,6 +32,8 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
+    // console.log(req.body)
+    console.log(req);
     const {
       productThumbnail,
       productTitle,
@@ -53,6 +55,8 @@ router.post("/", async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 });
+
+
 router.patch("/:id", async (req, res) => {
   const id = req.params.id;
   const {
@@ -110,6 +114,7 @@ router.patch("/:id", async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 });
+
 
 router.delete("/:id", async (req, res) => {
   const id = req.params.id;
