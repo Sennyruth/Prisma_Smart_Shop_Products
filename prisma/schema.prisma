@@ -15,6 +15,5 @@ model Product{
   productDescription String @map("product_Description")
   productPrice Float @map("product-Price")
   Onoffer Boolean @map("On-offer")
-  @@unique([productThumbnail])
   @@map("products_table")
 }
